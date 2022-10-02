@@ -1,0 +1,24 @@
+Make sure you tap trust on your device when you first connect it to Linux OS. (Trust on both sides)
+
+SIMPLE STEPS:
+Commands:
+sudo add-apt-repository universe
+sudo apt-get update
+sudo apt install git -y
+sudo apt install curl -y
+sudo apt install libimobiledevice-utils -y
+sudo apt install python3-pip -y
+
+Libssl.so.1.1 error fix:
+Command 1: wget http://nz2.archive.ubuntu.com/ubuntu/pool/main/o/open..
+Command 2: sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
+
+Fix SSH/USB issues:
+Command 1: sudo systemctl stop usbmuxd
+Command 2: sudo usbmuxd -p -f
+It will be initialized.
+Leave it minimized.
+*Make sure it is not shutdown.
+
+If you are stuck in recovery mode:
+Command 1: sudo ./irecovery -n 
